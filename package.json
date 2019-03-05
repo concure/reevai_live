@@ -1,0 +1,16 @@
+{
+  "name": "vibration",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-sass": "latest",
+    "grunt-spritesmith": "latest",
+    "node-sass": "latest",
+    "browser-sync": "latest"
+  },
+}
