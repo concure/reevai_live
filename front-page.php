@@ -45,8 +45,8 @@ get_header(); ?>
 
             <div class="col-lg-5">
                 <div class="animated-img">
-                    <img src="/wp-content/themes/reevai_live/images/process.svg" alt="">
-                    <img class="animated-bg" src="/wp-content/themes/reevai_live/images/process-bg.svg" alt="">
+                    <img src="/wp-content/themes/reevai_live/images/process3.svg" alt="">
+
                 </div>
             </div>
 
