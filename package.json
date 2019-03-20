@@ -13,4 +13,8 @@
     "node-sass": "latest",
     "browser-sync": "latest"
   },
+  "dependencies": {
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-livereload": "^0.1.3"
+  }
 }

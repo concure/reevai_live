@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900');
+
+$main-red: #ff2727;
+$black: #353535;
+$grey: #bbbbbb;
+
+body {
+      font-family: 'Poppins', sans-serif!important;
+      line-height: 180%;
+}
+ .container {
+       max-width: 1300px;
+       width: 100%;
+}
+.btn, .wpcf7-submit {
+      display: block;
+      max-width: 450px;
+      width: 100%;
+      background: $main-red;
+      font-size: 18px;
+      color: white;
+      font-weight: 600;
+      padding: 19px 10px;
+      border-radius: 0;
+      -webkit-box-shadow: 0 10px 30px 0px rgba(0,0,0,0.2);
+      -moz-box-shadow: 0 10px 30px 0px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 30px 0px rgba(0,0,0,0.2);
+      &:hover {
+            color: white;
+            background: red;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+      }
+}
+.wpcf7-submit {
+      height: 100%;
+      max-width: none;
+      padding: 10px ;
+      font-weight: 600;
+      font-size: 16px;
+      border:0;
+}
+.btn_underline {
+      font-size: 18px;
+      font-weight: bold;
+      color: $main-red;
+      border-bottom: 1px solid $main-red;
+      &:hover {
+            text-decoration: none;
+            color: $main-red;
+      }
+}
+h1 {
+      color: $main-red;
+      font-size: 30px;
+      font-weight: 600;
+      padding: 30px 0;
+}
+img {
+      max-width: 100%;
+}
+input, textarea {
+      font-family: inherit!important;
+}

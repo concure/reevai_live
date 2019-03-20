@@ -22,13 +22,18 @@
 }
 
 @mixin inputStyle() {
-  background: $input_bg_color;
-  border: none;
-  font-size: 13px;
-  height: 40px;
-  color: #000;
-  box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.20);
-  padding: 10px 20px 8px;
+  height: 45px;
+  font-size: 14px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #efefef;
+  width: 100%;
+  outline: none;
+  @include placeholder {
+    font-style:italic;
+    color: white;
+    font-weight:100;
+  }
   @include rounded(0px);
   &:hover, &:focus {
     text-decoration: none;
@@ -41,4 +46,11 @@
     -o-transition:      $transition;
     -webkit-transition: $transition;
     transition:         $transition;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
 }

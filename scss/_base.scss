@@ -1,0 +1,272 @@
+header {
+  margin-top: 50px;
+}
+.navbar {
+  padding: 20px 0 0 0;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.navbar-collapse {
+ justify-content: flex-end;
+  align-items: center;
+}
+.navbar-nav {
+  margin: 0!important;
+  li {
+    a {
+      font-size: 16px;
+      color: $black;
+      margin: 0 20px;
+    }
+  }
+}
+.jumbotron {
+  padding: 0;
+  background: none;
+  .container {
+
+  }
+  .jumbotron_info {
+    max-width: 940px;
+    h1 {
+      color: $black;
+      font-size: 60px;
+      font-weight: bold;
+      margin-top: 50px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+    span {
+      display: block;
+      margin-bottom: 30px;
+      color: grey;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 120%;
+    }
+
+  }
+  .reference_gallery {
+    .gallery-item {
+
+    }
+    .container {
+      padding: 0;
+      .row {
+      }
+    };
+    margin-top: 100px;
+    .col-md-4 {
+
+    }
+    a {
+      img {
+
+      }
+    }
+  }
+  .center {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 50px 0;
+  }
+}
+
+#about_us {
+  .container {
+
+  }
+}
+.content-box {
+  border-left: 1px solid $main-red;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  strong {
+    font-size: 24px;
+    color:black;
+    margin-bottom: 30px;
+    display: inline-block;
+    font-weight: 600;
+  }
+  p {
+    font-size: 18px;
+    color: $grey;
+    padding-bottom: 15px;
+    font-weight: 400;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      display: block;
+      padding: 5px 0;
+      font-size: 18px;
+      color: black;
+      font-weight: 400;
+    }
+  }
+}
+
+
+#working_process {
+  margin-top: 120px;
+  .container {
+
+  }
+  h1 {
+    padding-bottom: 50px;
+  }
+}
+.current_process {
+  border-left: 1px solid $main-red;
+  padding-left: 30px;
+  .numbering {
+    font-size: 72px;
+    color: $main-red;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+  .title {
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: $grey;
+    line-height: 140%;
+  }
+}
+
+.price_offer {
+  padding: 40px 30px 30px;
+  background: $main-red;
+  color: white;
+  width: 100%;
+  margin: 30px 15px 0px 15px;
+  strong {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  span {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    a {
+      font-weight: bold;
+      color: white;
+    };
+  }
+  .btn {
+    background: white;
+    color: $black;
+  }
+}
+
+
+#solutions {
+  margin-top: 100px;
+  .container {
+
+  }
+}
+
+footer {
+  padding-top: 50px;
+  margin-top: 100px;
+  background: #f4f4f4;
+  a {
+    display: block;
+  }
+  .container {
+    max-width: 1140px;
+  }
+  h1 {
+
+  }
+  form {
+    input, textarea {
+      @include inputStyle();
+    }
+    textarea {
+      padding-top: 10px;
+      height: 150px;
+    }
+    p {
+      span {
+        input {
+
+        }
+      }
+    }
+  }
+  .wpcf7-not-valid-tip {
+    background: #ffabab;
+    padding: 0px 10px;
+    color: white;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  strong {
+    color: $main-red;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 30px 0;
+    display: block;
+  }
+  a, span {
+    display: block;
+    color: black;
+  }
+}
+.copyright {
+  padding: 20px 0;
+  text-align: center;
+  background: white;
+  width: 100%;
+  margin-top: 30px;
+  font-size: 14px;
+}
+.social-sites {
+  display: flex;
+  a {
+    img {
+      width: 40px;
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.animated-img {
+  position: relative;
+  .animated-bg {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    -webkit-animation: float 4s ease-in-out infinite;
+    -o-animation: float 4s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-40px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}

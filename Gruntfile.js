@@ -26,7 +26,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         src: [
-          //'bower_components/jquery/dist/jquery.js',
+          'bower_components/jquery/dist/jquery.js',
           'bower_components/bootstrap-sass/dist/js/bootstrap.min.js',
           //'bower_components/flexslider/jquery.flexslider-min.js',
           'js/app.js'
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
       },
 
       options: {
-        livereload: true
+        livereload:  true
       }
     },
 
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
           },
           options: {
               watchTask: true,
-              proxy: "bbf.local"
+              proxy: "reevai.virtual"
           }
       }
   }

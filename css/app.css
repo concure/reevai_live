@@ -5,8 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
-@import url(../bower_components/components-font-awesome/css/font-awesome.css);
-@import url(../bower_components/flexslider/flexslider.css);
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900");
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -267,7 +266,7 @@ html {
 
 html {
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -5988,5 +5987,278 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  line-height: 180%; }
+
+.container {
+  max-width: 1300px;
+  width: 100%; }
+
+.btn, .wpcf7-submit {
+  display: block;
+  max-width: 450px;
+  width: 100%;
+  background: #ff2727;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  padding: 19px 10px;
+  border-radius: 0;
+  -webkit-box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.2); }
+  .btn:hover, .wpcf7-submit:hover {
+    color: white;
+    background: red;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+
+.wpcf7-submit {
+  height: 100%;
+  max-width: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  border: 0; }
+
+.btn_underline {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff2727;
+  border-bottom: 1px solid #ff2727; }
+  .btn_underline:hover {
+    text-decoration: none;
+    color: #ff2727; }
+
+h1 {
+  color: #ff2727;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 30px 0; }
+
+img {
+  max-width: 100%; }
+
+input, textarea {
+  font-family: inherit !important; }
+
+header {
+  margin-top: 50px; }
+
+.navbar {
+  padding: 20px 0 0 0;
+  max-width: 1300px;
+  margin: 0 auto; }
+
+.navbar-collapse {
+  justify-content: flex-end;
+  align-items: center; }
+
+.navbar-nav {
+  margin: 0 !important; }
+  .navbar-nav li a {
+    font-size: 16px;
+    color: #353535;
+    margin: 0 20px; }
+
+.jumbotron {
+  padding: 0;
+  background: none; }
+  .jumbotron .jumbotron_info {
+    max-width: 940px; }
+    .jumbotron .jumbotron_info h1 {
+      color: #353535;
+      font-size: 60px;
+      font-weight: bold;
+      margin-top: 50px;
+      margin-bottom: 10px;
+      padding-bottom: 10px; }
+    .jumbotron .jumbotron_info span {
+      display: block;
+      margin-bottom: 30px;
+      color: grey;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 120%; }
+  .jumbotron .reference_gallery {
+    margin-top: 100px; }
+    .jumbotron .reference_gallery .container {
+      padding: 0; }
+  .jumbotron .center {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 50px 0; }
+
+.content-box {
+  border-left: 1px solid #ff2727;
+  padding-left: 40px;
+  padding-bottom: 20px; }
+  .content-box strong {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 30px;
+    display: inline-block;
+    font-weight: 600; }
+  .content-box p {
+    font-size: 18px;
+    color: #bbbbbb;
+    padding-bottom: 15px;
+    font-weight: 400; }
+  .content-box ul {
+    padding: 0;
+    margin: 0; }
+    .content-box ul li {
+      display: block;
+      padding: 5px 0;
+      font-size: 18px;
+      color: black;
+      font-weight: 400; }
+
+#working_process {
+  margin-top: 120px; }
+  #working_process h1 {
+    padding-bottom: 50px; }
+
+.current_process {
+  border-left: 1px solid #ff2727;
+  padding-left: 30px; }
+  .current_process .numbering {
+    font-size: 72px;
+    color: #ff2727;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 100%; }
+  .current_process .title {
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 30px; }
+  .current_process p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #bbbbbb;
+    line-height: 140%; }
+
+.price_offer {
+  padding: 40px 30px 30px;
+  background: #ff2727;
+  color: white;
+  width: 100%;
+  margin: 30px 15px 0px 15px; }
+  .price_offer strong {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600; }
+  .price_offer span {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 20px; }
+    .price_offer span a {
+      font-weight: bold;
+      color: white; }
+  .price_offer .btn {
+    background: white;
+    color: #353535; }
+
+#solutions {
+  margin-top: 100px; }
+
+footer {
+  padding-top: 50px;
+  margin-top: 100px;
+  background: #f4f4f4; }
+  footer a {
+    display: block; }
+  footer .container {
+    max-width: 1140px; }
+  footer form input, footer form textarea {
+    height: 45px;
+    font-size: 14px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #efefef;
+    width: 100%;
+    outline: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px; }
+    footer form input ::-webkit-input-placeholder, footer form textarea ::-webkit-input-placeholder {
+      font-style: italic;
+      color: white;
+      font-weight: 100; }
+    footer form input :-moz-placeholder, footer form textarea :-moz-placeholder {
+      font-style: italic;
+      color: white;
+      font-weight: 100; }
+    footer form input ::-moz-placeholder, footer form textarea ::-moz-placeholder {
+      font-style: italic;
+      color: white;
+      font-weight: 100; }
+    footer form input :-ms-input-placeholder, footer form textarea :-ms-input-placeholder {
+      font-style: italic;
+      color: white;
+      font-weight: 100; }
+    footer form input:hover, footer form input:focus, footer form textarea:hover, footer form textarea:focus {
+      text-decoration: none;
+      color: #000; }
+  footer form textarea {
+    padding-top: 10px;
+    height: 150px; }
+  footer .wpcf7-not-valid-tip {
+    background: #ffabab;
+    padding: 0px 10px;
+    color: white;
+    margin-bottom: 0;
+    font-size: 14px; }
+  footer strong {
+    color: #ff2727;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 30px 0;
+    display: block; }
+  footer a, footer span {
+    display: block;
+    color: black; }
+
+.copyright {
+  padding: 20px 0;
+  text-align: center;
+  background: white;
+  width: 100%;
+  margin-top: 30px;
+  font-size: 14px; }
+
+.social-sites {
+  display: flex; }
+  .social-sites a img {
+    width: 40px; }
+    .social-sites a img:first-child {
+      margin-right: 10px; }
+
+.animated-img {
+  position: relative; }
+  .animated-img .animated-bg {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    -webkit-animation: float 4s ease-in-out infinite;
+    -o-animation: float 4s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite; }
+
+@keyframes float {
+  0% {
+    transform: translatey(0px); }
+  50% {
+    transform: translatey(-40px); }
+  100% {
+    transform: translatey(0px); } }
 
 /*# sourceMappingURL=app.css.map */
