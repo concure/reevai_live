@@ -2,6 +2,7 @@
   "name": "vibration",
   "version": "0.0.1",
   "devDependencies": {
+    "browser-sync": "latest",
     "grunt": "latest",
     "grunt-autoprefixer": "latest",
     "grunt-contrib-concat": "latest",
@@ -9,9 +10,8 @@
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-sass": "latest",
-    "grunt-spritesmith": "latest",
-    "node-sass": "latest",
-    "browser-sync": "latest"
+    "grunt-spritesmith": "^6.6.3",
+    "node-sass": "latest"
   },
   "dependencies": {
     "grunt-browser-sync": "^2.2.0",

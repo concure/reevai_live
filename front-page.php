@@ -23,16 +23,12 @@ get_header(); ?>
              </div>
 
              <div class="reference_gallery">
-                 <div class="container">
-                     <div class="row">
-                         <div class="col-md-4 gallery-item"><a href="" ><img src="/wp-content/themes/reevai_live/images/mockup.png" alt=""></a></div>
-                         <div class="col-md-4 gallery-item"><a href="" ><img src="/wp-content/themes/reevai_live/images/mockup2.png" alt=""></a></div>
-                         <div class="col-md-4 gallery-item"><a href="" ><img src="/wp-content/themes/reevai_live/images/mockup3.png" alt=""></a></div>
-                         <div class="col-md-4 gallery-item"><a href="" ><img src="/wp-content/themes/reevai_live/images/mockup4.png" alt=""></a></div>
-                         <div class="col-md-4 gallery-item"><a href="" ><img src="/wp-content/themes/reevai_live/images/mockup6.png" alt=""></a></div>
-                         <div class="col-md-4 gallery-item"><a href="" ><img src="/wp-content/themes/reevai_live/images/mockup5.png" alt=""></a></div>
-                     </div>
-                 </div>
+                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup.png" alt=""></a></div>
+                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup2.png" alt=""></a></div>
+                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup3.png" alt=""></a></div>
+                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup4.png" alt=""></a></div>
+                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup6.png" alt=""></a></div>
+                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup5.png" alt=""></a></div>
              </div>
              <div class="center"><a href="" class="btn_underline">Zobraziť viac</a></div>
          </div>
@@ -45,7 +41,7 @@ get_header(); ?>
 
             <div class="col-lg-5">
                 <div class="animated-img">
-                    <img src="/wp-content/themes/reevai_live/images/process3.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/process3.svg" alt="">
 
                 </div>
             </div>
@@ -113,7 +109,7 @@ get_header(); ?>
         <div class="row">
 
             <div class="col-lg-5">
-                <img src="/wp-content/themes/reevai_live/images/content-img.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/content-img.png" alt="">
             </div>
 
             <div class="col-lg-7">

@@ -33,7 +33,7 @@
             </div>
 
             <div class="col-lg-6">
-                <strong>Kontakné údaju</strong>
+                <strong>Kontakné údaje</strong>
                 <a href="">info@reevai.com</a>
                 <a href="">+421 948 548 458</a>
                 <span>Varsum, s.r.o.</span>
@@ -42,8 +42,8 @@
 
                 <strong>Sledujte nás</strong>
                 <div class="social-sites">
-                    <a href=""><img src="/wp-content/themes/reevai_live/images/fb.png" alt=""></a>
-                    <a href=""><img src="/wp-content/themes/reevai_live/images/instagram.png" alt=""></a>
+                    <a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/fb.png" alt=""></a>
+                    <a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/instagram.png" alt=""></a>
                 </div>
             </div>
 

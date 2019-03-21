@@ -6084,9 +6084,18 @@ header {
       font-weight: 300;
       line-height: 120%; }
   .jumbotron .reference_gallery {
-    margin-top: 100px; }
-    .jumbotron .reference_gallery .container {
-      padding: 0; }
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    clear: both;
+    overflow: hidden; }
+    .jumbotron .reference_gallery .gallery-item {
+      width: calc(33.333% - 30px);
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 30px; }
   .jumbotron .center {
     display: block;
     width: 100%;
