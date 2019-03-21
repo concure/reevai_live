@@ -63,7 +63,7 @@ get_header(); ?>
     <div class="container">
         <h1>Ako to u nás funguje</h1>
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4">
                 <div class="current_process">
                     <span class="numbering">01</span>
                     <strong class="title">Prvé stretnutie</strong>
@@ -73,7 +73,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4">
                 <div class="current_process">
                     <span class="numbering">02</span>
                     <strong class="title">Prvé stretnutie</strong>
@@ -83,7 +83,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4">
                 <div class="current_process">
                     <span class="numbering">03</span>
                     <strong class="title">Prvé stretnutie</strong>
@@ -109,7 +109,7 @@ get_header(); ?>
         <div class="row">
 
             <div class="col-lg-5">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/content-img.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/css-img.svg" alt="">
             </div>
 
             <div class="col-lg-7">

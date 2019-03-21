@@ -4,6 +4,24 @@ $main-red: #ff2727;
 $black: #353535;
 $grey: #bbbbbb;
 
+/* min-w
+
+@include media-breakpoint-up(sm) { ... } 576px
+@include media-breakpoint-up(md) { ... } 768px
+@include media-breakpoint-up(lg) { ... } 992px
+@include media-breakpoint-up(xl) { ... } 1200px
+
+*/
+
+/* max-w
+
+@include media-breakpoint-down(xs) { ... } 575.98px
+@include media-breakpoint-down(sm) { ... } 767.98px
+@include media-breakpoint-down(md) { ... } 991.98px
+@include media-breakpoint-down(lg) { ... } 1199.98px
+
+*/
+
 body {
       font-family: 'Poppins', sans-serif!important;
       line-height: 180%;
@@ -14,17 +32,22 @@ body {
 }
 .btn, .wpcf7-submit {
       display: block;
-      max-width: 450px;
+      max-width: 300px;
       width: 100%;
       background: $main-red;
-      font-size: 18px;
+      font-size: 16px;
       color: white;
       font-weight: 600;
       padding: 19px 10px;
       border-radius: 0;
+      white-space: normal;
       -webkit-box-shadow: 0 10px 30px 0px rgba(0,0,0,0.2);
       -moz-box-shadow: 0 10px 30px 0px rgba(0,0,0,0.2);
       box-shadow: 0 10px 30px 0px rgba(0,0,0,0.2);
+      @include media-breakpoint-up(md) {
+            max-width: 450px;
+            font-size: 18px;
+      }
       &:hover {
             color: white;
             background: red;
@@ -63,3 +86,5 @@ img {
 input, textarea {
       font-family: inherit!important;
 }
+
+

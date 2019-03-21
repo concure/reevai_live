@@ -5988,6 +5988,22 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important; } }
 
+/* min-w
+
+@include media-breakpoint-up(sm) { ... } 576px
+@include media-breakpoint-up(md) { ... } 768px
+@include media-breakpoint-up(lg) { ... } 992px
+@include media-breakpoint-up(xl) { ... } 1200px
+
+*/
+/* max-w
+
+@include media-breakpoint-down(xs) { ... } 575.98px
+@include media-breakpoint-down(sm) { ... } 767.98px
+@include media-breakpoint-down(md) { ... } 991.98px
+@include media-breakpoint-down(lg) { ... } 1199.98px
+
+*/
 body {
   font-family: "Poppins", sans-serif !important;
   line-height: 180%; }
@@ -5998,17 +6014,22 @@ body {
 
 .btn, .wpcf7-submit {
   display: block;
-  max-width: 450px;
+  max-width: 300px;
   width: 100%;
   background: #ff2727;
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   font-weight: 600;
   padding: 19px 10px;
   border-radius: 0;
+  white-space: normal;
   -webkit-box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.2); }
+  @media (min-width: 768px) {
+    .btn, .wpcf7-submit {
+      max-width: 450px;
+      font-size: 18px; } }
   .btn:hover, .wpcf7-submit:hover {
     color: white;
     background: red;
@@ -6046,12 +6067,18 @@ input, textarea {
   font-family: inherit !important; }
 
 header {
-  margin-top: 50px; }
+  margin-top: 0px; }
+  @media (min-width: 992px) {
+    header {
+      margin-top: 50px; } }
 
 .navbar {
-  padding: 20px 0 0 0;
+  padding: 20px 0 0 15px;
   max-width: 1300px;
   margin: 0 auto; }
+  @media (min-width: 992px) {
+    .navbar {
+      padding: 20px 0 0 0; } }
 
 .navbar-collapse {
   justify-content: flex-end;
@@ -6065,53 +6092,82 @@ header {
     margin: 0 20px; }
 
 .jumbotron {
-  padding: 0;
+  padding: 15px;
   background: none; }
+  @media (min-width: 992px) {
+    .jumbotron {
+      padding: 0; } }
   .jumbotron .jumbotron_info {
     max-width: 940px; }
     .jumbotron .jumbotron_info h1 {
       color: #353535;
-      font-size: 60px;
+      font-size: 34px;
       font-weight: bold;
-      margin-top: 50px;
+      margin-top: 0px;
       margin-bottom: 10px;
       padding-bottom: 10px; }
+      @media (min-width: 992px) {
+        .jumbotron .jumbotron_info h1 {
+          font-size: 60px;
+          margin-top: 50px; } }
     .jumbotron .jumbotron_info span {
       display: block;
       margin-bottom: 30px;
       color: grey;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 300;
       line-height: 120%; }
+      @media (min-width: 992px) {
+        .jumbotron .jumbotron_info span {
+          font-size: 24px; } }
   .jumbotron .reference_gallery {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     clear: both;
     overflow: hidden; }
+    @media (min-width: 768px) {
+      .jumbotron .reference_gallery {
+        margin-top: 100px; } }
     .jumbotron .reference_gallery .gallery-item {
-      width: calc(33.333% - 30px);
-      margin-left: 15px;
-      margin-right: 15px;
+      width: calc(50% - 15px);
+      margin-left: 7px;
+      margin-right: 7px;
       margin-bottom: 30px; }
+      @media (min-width: 992px) {
+        .jumbotron .reference_gallery .gallery-item {
+          width: calc(33.333% - 30px);
+          margin-left: 15px;
+          margin-right: 15px; } }
   .jumbotron .center {
     display: block;
     width: 100%;
     text-align: center;
-    margin: 40px 0 50px 0; }
+    margin: 20px 0 20px 0; }
+    @media (min-width: 768px) {
+      .jumbotron .center {
+        margin: 40px 0 50px 0; } }
 
 .content-box {
-  border-left: 1px solid #ff2727;
-  padding-left: 40px;
+  border-bottom: 1px solid #ff2727;
+  padding-left: 0px;
   padding-bottom: 20px; }
+  @media (min-width: 768px) {
+    .content-box {
+      border-left: 1px solid #ff2727;
+      padding-left: 40px;
+      border-bottom: 0; } }
   .content-box strong {
-    font-size: 24px;
+    font-size: 20px;
     color: black;
     margin-bottom: 30px;
     display: inline-block;
     font-weight: 600; }
+    @media (min-width: 768px) {
+      .content-box strong {
+        font-size: 24px; } }
   .content-box p {
     font-size: 18px;
     color: #bbbbbb;
@@ -6128,20 +6184,35 @@ header {
       font-weight: 400; }
 
 #working_process {
-  margin-top: 120px; }
+  margin-top: 50px; }
+  @media (min-width: 768px) {
+    #working_process {
+      margin-top: 120px; } }
   #working_process h1 {
-    padding-bottom: 50px; }
+    padding-bottom: 20px; }
+    @media (min-width: 768px) {
+      #working_process h1 {
+        margin-top: 50px; } }
 
 .current_process {
-  border-left: 1px solid #ff2727;
-  padding-left: 30px; }
+  border-bottom: 1px solid #ff2727;
+  padding-left: 0px; }
+  @media (min-width: 768px) {
+    .current_process {
+      border-left: 1px solid #ff2727;
+      padding-left: 30px;
+      border-bottom: 0; } }
   .current_process .numbering {
     font-size: 72px;
     color: #ff2727;
     display: block;
     margin-bottom: 10px;
     font-weight: 600;
-    line-height: 100%; }
+    line-height: 100%;
+    margin-top: 30px; }
+    @media (min-width: 768px) {
+      .current_process .numbering {
+        margin-top: 0px; } }
   .current_process .title {
     display: block;
     font-weight: 600;
@@ -6160,16 +6231,25 @@ header {
   color: white;
   width: 100%;
   margin: 30px 15px 0px 15px; }
+  @media (min-width: 768px) {
+    .price_offer {
+      padding: 40px 30px 30px; } }
   .price_offer strong {
     display: block;
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600; }
+    @media (min-width: 768px) {
+      .price_offer strong {
+        font-size: 30px; } }
   .price_offer span {
     display: block;
     margin-bottom: 20px;
     font-weight: 400;
-    font-size: 20px; }
+    font-size: 16px; }
+    @media (min-width: 768px) {
+      .price_offer span {
+        font-size: 20px; } }
     .price_offer span a {
       font-weight: bold;
       color: white; }
