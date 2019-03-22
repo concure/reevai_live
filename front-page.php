@@ -63,7 +63,7 @@ get_header(); ?>
     <div class="container">
         <h1>Ako to u nás funguje</h1>
         <div class="row">
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="current_process">
                     <span class="numbering">01</span>
                     <strong class="title">Prvé stretnutie</strong>
@@ -73,23 +73,19 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="current_process">
                     <span class="numbering">02</span>
-                    <strong class="title">Prvé stretnutie</strong>
-                    <p>Prejdeme si s vami váš projekt a spolu najdeme tie najlepšie možné riešenia. Rozoberieme si
-                        štruktúru projektu. Podelíme sa o skúsenosti,
-                        informácie a novinky v tvorbe webstránok</p>
+                    <strong class="title">Návrh na mieru</strong>
+                    <p>Vytvoríme pre vás jedinečný dizajn ktorý bude blizky vám a hlavne osloví vaších potencionálných zakazníkov. Stránku vám nakódime s našími programátormi a ukázeme vám skúšobnú verziu</p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <div class="current_process">
                     <span class="numbering">03</span>
-                    <strong class="title">Prvé stretnutie</strong>
-                    <p>Prejdeme si s vami váš projekt a spolu najdeme tie najlepšie možné riešenia. Rozoberieme si
-                        štruktúru projektu. Podelíme sa o skúsenosti,
-                        informácie a novinky v tvorbe webstránok</p>
+                    <strong class="title">Nasadenie webstránky</strong>
+                    <p>Po ukončení skúšobnej verzie vám webstránku nasadíme na doménu s menom vašej spoločnosti. Následne spolu s vami všetko skontrolujeme či frčí ako má</p>
                 </div>
             </div>
 
