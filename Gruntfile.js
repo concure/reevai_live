@@ -113,7 +113,7 @@ module.exports = function(grunt) {
                 },
                 options: {
                     watchTask: true,
-                    proxy: "reevai.virtual"
+                    proxy: "reevai.local"
                 }
             }
         }

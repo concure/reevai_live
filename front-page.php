@@ -109,7 +109,7 @@ get_header(); ?>
         <div class="row">
 
             <div class="col-lg-5">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/css-img.svg" alt="">
+                <?php include("images/css-img.svg"); ?>
             </div>
 
             <div class="col-lg-7">
