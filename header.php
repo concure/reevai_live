@@ -21,12 +21,21 @@
 
 <body <?php body_class(); ?>>
 <header class="header clear" role="banner">
-	<nav class="navbar navbar-toggleable-md navbar-light">
-		<a href="<?php echo home_url(); ?>">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" class="logo-img">
-		</a>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<?php wp_nav_menu(array('theme_location' => 'menu-1', 'container' => false, 'menu_class' => 'navbar-nav mr-auto')); ?>
-		</div>
-	</nav>
+    <div class="container">
+        <div class="row">
+            <a href="<?php echo home_url(); ?>" class="logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" class="logo-img">
+            </a>
+            <nav class="navbar navbar-toggleable-md navbar-light">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <?php wp_nav_menu(array('theme_location' => 'menu-1', 'container' => false, 'menu_class' => 'navbar-nav mr-auto')); ?>
+                </div>
+            </nav>
+            <div id="open-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
 </header>

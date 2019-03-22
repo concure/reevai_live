@@ -10234,4 +10234,10 @@ jQuery(document).ready(function($) {
 	   itemSelector: '.gallery-item',
 	});
 
+	$('#open-menu').click(function(){
+		$('.collapse').slideToggle();
+		$(this).toggleClass('open');
+		return false;
+	});
+
 });
