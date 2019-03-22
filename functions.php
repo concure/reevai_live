@@ -110,7 +110,6 @@ function reevai_scripts() {
 	wp_enqueue_style( 'reevai-style', get_template_directory_uri() . '/css/style.css', array(), '20151215' );
 
     wp_enqueue_script( 'tether', get_template_directory_uri() . '/bower_components/tether/dist/js/tether.min.js', array(), false, true );
-    wp_enqueue_script( 'script-animate', get_template_directory_uri() . '/node_modules/animejs/lib/anime.min.js', array(), '20151215', true );
     wp_enqueue_script( 'masonry', get_template_directory_uri() . '/bower_components/masonry-layout/dist/masonry.pkgd.min.js', array(), false, true );
 	wp_enqueue_script( 'reevai-script', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
 
