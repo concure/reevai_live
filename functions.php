@@ -106,10 +106,11 @@ add_action( 'widgets_init', 'reevai_widgets_init' );
  */
 function reevai_scripts() {
 	//wp_enqueue_style( 'reevai-style', get_stylesheet_uri() );
-
+	wp_enqueue_style( 'aos-style', get_template_directory_uri() . '/bower_components/aos/dist/aos.css', array(), '20192802' );
 	wp_enqueue_style( 'reevai-style', get_template_directory_uri() . '/css/style.css', array(), '20151215' );
 
     wp_enqueue_script( 'tether', get_template_directory_uri() . '/bower_components/tether/dist/js/tether.min.js', array(), false, true );
+    wp_enqueue_script('aos', get_template_directory_uri() . '/bower_components/aos/dist/aos.js', array('jquery'), '20192802', true );
     wp_enqueue_script( 'masonry', get_template_directory_uri() . '/bower_components/masonry-layout/dist/masonry.pkgd.min.js', array(), false, true );
 	wp_enqueue_script( 'reevai-script', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
 
@@ -145,17 +146,17 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 // Register Custom Post Type
-/*
+
 function custom_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Výstavy', 'Post Type General Name', 'reevai' ),
-		'singular_name'         => _x( 'Výstava', 'Post Type Singular Name', 'reevai' ),
-		'menu_name'             => __( 'Výstavy', 'reevai' ),
-		'name_admin_bar'        => __( 'Výstavy', 'reevai' ),
+		'name'                  => _x( 'Referencie', 'Post Type General Name', 'reevai' ),
+		'singular_name'         => _x( 'Referencia', 'Post Type Singular Name', 'reevai' ),
+		'menu_name'             => __( 'Referencie', 'reevai' ),
+		'name_admin_bar'        => __( 'Referencie', 'reevai' ),
 	);
 	$args = array(
-		'label'                 => __( 'Výstava', 'reevai' ),
+		'label'                 => __( 'Referencia', 'reevai' ),
 		'description'           => __( 'Post Type Description', 'reevai' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', ),
@@ -167,17 +168,18 @@ function custom_post_type() {
 		'menu_position'         => 5,
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
+		'menu_icon'				=> 'dashicons-star-filled',
 		'can_export'            => true,
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'vystavy', $args );
+	register_post_type( 'referencie', $args );
 
 }
 add_action( 'init', 'custom_post_type', 0 );
-*/
+
 
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();

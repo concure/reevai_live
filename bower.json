@@ -19,6 +19,7 @@
     "bootstrap-sass": "bootstrap#v4.0.0-alpha.6",
     "components-font-awesome": "^4.7.0",
     "flexslider": "^2.6.3",
-    "masonry-layout": "^4.2.2"
+    "masonry-layout": "^4.2.2",
+    "aos": "^2.3.4"
   }
 }

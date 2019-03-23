@@ -16,21 +16,59 @@ get_header(); ?>
  <div class="jumbotron">
      <div class="container">
          <div class="row">
-             <div class="jumbotron_info">
-                 <h1>Komplexné riešenie webov podľa vaších predstáv.</h1>
-                 <span>Zameriavame sa na tvorbu webstránok ktoré vám pomôžu v budovaní a rozvoja vášho biznisu alebo osobné rastu.</span>
-                 <a href="" class="btn">Mám záujem o cenovu ponuku</a>
-             </div>
+            <?php if (have_rows('jumbotron')): ?>
+                <?php while (have_rows('jumbotron')): the_row();
+                        $content = get_sub_field('content');
+                        $btn = get_sub_field('button');
+                    ?>
+                     <div class="jumbotron_info" data-aos="fade-right">
+                         <?php echo $content; ?>
+                         <?php if ($btn) {
+                            echo '<a href="javascript:void(0)" class="btn contact-btn" data-aos="fade-bottom" data-aos-delay="400">'. $btn .'</a>';
+                         } ?>
+                     </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
 
-             <div class="reference_gallery">
-                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup.png" alt=""></a></div>
-                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup2.png" alt=""></a></div>
-                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup3.png" alt=""></a></div>
-                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup4.png" alt=""></a></div>
-                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup6.png" alt=""></a></div>
-                 <div class="gallery-item"><a href="" ><img src="<?php echo get_template_directory_uri(); ?>/images/mockup5.png" alt=""></a></div>
+             <div class="reference_gallery" id="references">
+                 <?php
+                 $i = 0;
+                  $argss = array(
+                          'post_type' => 'referencie',
+                          'posts_per_page' => 6,
+                         );
+                  $the_query = new WP_Query( $argss );
+                  if( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+                        $thumb_img = get_the_post_thumbnail_url();
+                        $ref_full_img = get_field('full_page_img');
+                        $ref_url = get_field('reference_url');
+                    ?>
+                    <div class="gallery-item-wrapper">
+                        <div class="gallery-item" data-aos="fade-left" data-aos-delay="<?php $i++; echo $i; ?>00">
+                            <a href="javascript:void(0)">
+                                <img src="<?php echo $thumb_img ?>" alt="">
+                            </a>
+                        </div>
+                          <?php if ($ref_full_img) { ?>
+                                <div class="gallery-popup" style="display: none;">
+                                    <div class="popup">
+                                        <h2><?php the_title() ?></h2>
+                                        <a href="javascript:void(0)" class="close-popup"></a>
+                                        <div class="reference-preview">
+                                            <img src="<?php echo $ref_full_img ?>" alt="">
+                                        </div>
+                                        <?php if ($ref_url) {
+                                            echo '<a href="'. $ref_url .'" class="reference-url btn_underline" target="_blank">'. __('Navštíviť webstránku') .'</a>';
+                                        } ?>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    <?php endwhile; endif;
+                     wp_reset_query();
+                    ?>
              </div>
-             <div class="center"><a href="" class="btn_underline">Zobraziť viac</a></div>
+             <div class="center"><a href="" class="btn_underline"><?php _e('Zobraziť viac', 'reevai') ?></a></div>
          </div>
      </div>
  </div>
@@ -39,87 +77,78 @@ get_header(); ?>
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-5">
+            <div class="col-lg-5" data-aos="fade-right">
                 <div class="animated-img">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/process3.svg" alt="">
-
                 </div>
             </div>
-
-            <div class="col-lg-7">
-                <div class="content-box">
-                    <h1>O našej tvorbe</h1>
-                    <strong>Radi tvoríme zmysluplné produkty. Taktiež nás poteší keď nájdeme jednoduché a učinné riešenie pre váš produkt. </strong>
-                    <p>Či už zlepšujeme existujúcu myšlienku alebo prianášame novú do života.  V každom kroku sa zameriavame na proces ktorým tvoríme webstránku pre zakazníka a to tým že spolupracujeme s našimi klientmi na vytvaraní vzájomne prospešných vzťahov.
-                    Naš prístup k zakazníkom a vývoju projektov nám umožnuje realizovať myšlienky od konceptu až po spustenie, aj mimo neho.</p>
-                </div>
-            </div>
+            <?php if (have_rows('about_us')): ?>
+                <?php while (have_rows('about_us')): the_row(); ?>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="content-box">
+                            <?php the_sub_field('content'); ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
 
         </div>
     </div>
 </section>
-
+<?php if (have_rows('process')):
+    $i = 0;
+?>
 <section id="working_process">
     <div class="container">
-        <h1>Ako to u nás funguje</h1>
+        <h1 data-aos="fade-left"><?php _e('Ako to u nás funguje?', 'reevai') ?></h1>
         <div class="row">
-            <div class="col-lg-4 col-md-6">
+            <?php while (have_rows('process')): the_row();
+                $title = get_sub_field('header');
+                $content = get_sub_field('content');
+            ?>
+            <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="<?php $i++; echo $i; ?>00">
                 <div class="current_process">
-                    <span class="numbering">01</span>
-                    <strong class="title">Prvé stretnutie</strong>
-                    <p>Prejdeme si s vami váš projekt a spolu najdeme tie najlepšie možné riešenia. Rozoberieme si
-                        štruktúru projektu. Podelíme sa o skúsenosti,
-                        informácie a novinky v tvorbe webstránok</p>
+                    <span class="numbering">0<?php echo $i; ?></span>
+                    <?php if ($title) { ?>
+                        <strong class="title"><?php echo $title; ?></strong>
+                    <?php } ?>
+                    <?php if ($title) { ?>
+                        <p><?php echo $content; ?></p>
+                    <?php } ?>
+
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="current_process">
-                    <span class="numbering">02</span>
-                    <strong class="title">Návrh na mieru</strong>
-                    <p>Vytvoríme pre vás jedinečný dizajn ktorý bude blizky vám a hlavne osloví vaších potencionálných zakazníkov. Stránku vám nakódime s našími programátormi a ukázeme vám skúšobnú verziu</p>
+        <?php endwhile; ?>
+        <?php if (have_rows('contact_us')): ?>
+            <?php while (have_rows('contact_us')): the_row();
+                $content = get_sub_field('content');
+                $btn = get_sub_field('button');
+            ?>
+                <div class="price_offer" data-aos="fade-top">
+                    <?php echo $content; ?>
+                    <?php if ($btn) { ?>
+                        <a href="javascript:void(0)" class="btn contact-btn"><?php echo $btn; ?></a>
+                    <?php } ?>
                 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-12">
-                <div class="current_process">
-                    <span class="numbering">03</span>
-                    <strong class="title">Nasadenie webstránky</strong>
-                    <p>Po ukončení skúšobnej verzie vám webstránku nasadíme na doménu s menom vašej spoločnosti. Následne spolu s vami všetko skontrolujeme či frčí ako má</p>
-                </div>
-            </div>
-
-            <div class="price_offer">
-                <strong>Ako získam cenovu ponuku ?</strong>
-                <span>Najlepšie je osobné stretnutie kde si môžeme prejsť celý projekt.
-               <br/> Ale taktiež nás možete kontaktovať telefonicky <a href="">+421 949 428 069</a> alebo na <a href="">info@reevai.com</a></span>
-                <a href="" class="btn">Mám záujem o cenovu ponuku</a>
-            </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
 
         </div>
     </div>
 </section>
+<?php endif; ?>
 
 <section id="solutions">
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-5">
+            <div class="col-lg-5" data-aos="fade-right">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/css-img.svg" alt="">
             </div>
 
-            <div class="col-lg-7">
+            <div class="col-lg-7" data-aos="fade-left">
                 <div class="content-box">
-                    <h1>Ponúkame riešenia ktoré vám pomôžu
-                        s biznisom</h1>
-                    <ul>
-                        <li>- Moderný a reponzívny web</li>
-                        <li>  - SEO optimalizácia</li>
-                        <li>   - Web ktorý oslový potencionálných zakazníkov</li>
-                        <li>  - Aktualizácia systému</li>
-                        <li> - Kvalitný obsah</li>
-                        <li> - Stabliná podpora</li>
-                    </ul>
+                    <?php the_field('solutions'); ?>
                 </div>
             </div>
 

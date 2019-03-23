@@ -1,3 +1,9 @@
+a {
+  cursor: pointer;
+}
+body.scroll-disable {
+  overflow: hidden;
+}
 header {
   display: flex;
   width: 100%;
@@ -148,7 +154,7 @@ header {
         padding-top: 30px;
       }
     }
-    span {
+    p {
       display: block;
       margin-bottom: 30px;
       color: grey;
@@ -204,7 +210,7 @@ header {
     padding-left: 40px;
     border-bottom: 0;
   }
-  strong {
+  h2 {
     font-size: 20px;
     color:black;
     margin-bottom: 30px;
@@ -241,7 +247,75 @@ header {
     }
   }
 }
-
+.gallery-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, .7);
+  z-index: 9999999999;
+  max-height: 100%;
+  overflow-x: scroll;
+  .popup {
+    position: relative;
+    width: 600px;
+    background: #fff;
+    padding-bottom: 30px;
+    text-align: center;
+    margin: 50px auto;
+    padding-top: 30px;
+    max-width: 100%;
+    @media (max-width: 767px) {
+      margin: 25px auto;
+      padding-top: 20px;
+    }
+    h2 {
+      color: $main-red;
+    }
+    img {
+      max-width: 90%;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px 0px rgba(0,0,0,0.2);
+    }
+  }
+  .close-popup {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: -35px;
+    top: -35px;
+    opacity: .7;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      top: 10px;
+      right: 10px;
+    }
+    &:before, &:after {
+      content: '';
+      width: 100%;
+      height: 3px;
+      border-radius: 5px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(135deg);
+      @media (max-width: 767px) {
+        background: $black;
+      }
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(-135deg);
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
 
 #working_process {
   margin-top: 50px;
@@ -307,7 +381,7 @@ header {
   @include media-breakpoint-up(lg) {
     padding: 40px 30px 30px;
   }
-  strong {
+  h2 {
     display: block;
     margin-bottom: 20px;
     font-size: 24px;
@@ -316,7 +390,7 @@ header {
       font-size: 30px;
     }
   }
-  span {
+  p {
     display: block;
     margin-bottom: 20px;
     font-weight: 400;
@@ -369,6 +443,9 @@ footer {
 
   }
   form {
+    br {
+      display: none;
+    }
     input, textarea {
       @include inputStyle();
     }
@@ -380,6 +457,27 @@ footer {
       span {
         input {
 
+        }
+      }
+    }
+    input[type="checkbox"] {
+      width: auto;
+      height: auto;
+      margin-bottom: 0;
+      position: relative;
+      top: 6px;
+      margin-right: 8px;
+    }
+    span.wpcf7-list-item {
+      margin: 0;
+    }
+    .wpcf7-acceptance {
+      position: relative;
+      top: -10px;
+      label {
+        display: flex;
+        span {
+          display: flex;
         }
       }
     }
@@ -397,6 +495,7 @@ footer {
     font-weight: 600;
     padding: 30px 0;
     display: block;
+    line-height: 1.1;
   }
   a, span {
     display: block;

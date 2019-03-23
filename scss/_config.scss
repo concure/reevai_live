@@ -25,6 +25,7 @@ $grey: #bbbbbb;
 body {
       font-family: 'Poppins', sans-serif!important;
       line-height: 140%;
+      overflow-x: hidden;
       @include media-breakpoint-up(lg) {
             line-height: 180%;
       }
@@ -97,3 +98,6 @@ input, textarea {
 }
 
 
+.grecaptcha-badge {
+      visibility: hidden;
+}
