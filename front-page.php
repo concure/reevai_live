@@ -79,7 +79,7 @@ get_header(); ?>
 
             <div class="col-lg-5" data-aos="fade-right">
                 <div class="animated-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/process3.svg" alt="">
+                    <?php include("images/process3.svg"); ?>
                 </div>
             </div>
             <?php if (have_rows('about_us')): ?>
@@ -143,7 +143,7 @@ get_header(); ?>
         <div class="row">
 
             <div class="col-lg-5" data-aos="fade-right">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/css-img.svg" alt="">
+                <?php include("images/css-img.svg"); ?>
             </div>
 
             <div class="col-lg-7" data-aos="fade-left">
