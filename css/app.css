@@ -6076,11 +6076,15 @@ img {
 input, textarea {
   font-family: inherit !important; }
 
+a {
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: .2s ease-in-out; }
+  a:hover {
+    color: #ff2727; }
+
 .grecaptcha-badge {
   visibility: hidden; }
-
-a {
-  cursor: pointer; }
 
 body.scroll-disable {
   overflow: hidden; }
@@ -6496,6 +6500,10 @@ footer {
   footer form textarea {
     padding-top: 10px;
     height: 150px; }
+  footer form p .wpcf7-form-control-wrap {
+    margin-bottom: 20px; }
+    footer form p .wpcf7-form-control-wrap input {
+      margin-bottom: 0; }
   footer form input[type="checkbox"] {
     width: auto;
     height: auto;
@@ -6508,6 +6516,8 @@ footer {
   footer form .wpcf7-acceptance {
     position: relative;
     top: -10px; }
+    footer form .wpcf7-acceptance a {
+      margin-left: 3px; }
     footer form .wpcf7-acceptance label {
       display: flex; }
       footer form .wpcf7-acceptance label span {

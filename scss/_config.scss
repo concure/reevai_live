@@ -96,7 +96,14 @@ img {
 input, textarea {
       font-family: inherit!important;
 }
-
+a {
+  cursor: pointer;
+  text-decoration: none!important;
+  transition: .2s ease-in-out;
+  &:hover {
+    color: $main-red;
+  }
+}
 
 .grecaptcha-badge {
       visibility: hidden;
