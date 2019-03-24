@@ -1,6 +1,11 @@
+body, html, footer {
+  overflow-x: hidden;
+}
+
 body.scroll-disable {
   overflow: hidden;
 }
+
 header {
   display: flex;
   width: 100%;
@@ -493,6 +498,8 @@ footer {
         display: flex;
         span {
           display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
         }
       }
     }
@@ -557,5 +564,8 @@ footer {
     display: block;
     margin: 0 auto;
   }
+}
+#solutions svg, #about_us svg {
+  padding: 0 35px;
 }
 

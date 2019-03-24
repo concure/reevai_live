@@ -6119,6 +6119,9 @@ a {
 .grecaptcha-badge {
   visibility: hidden; }
 
+body, html, footer {
+  overflow-x: hidden; }
+
 body.scroll-disable {
   overflow: hidden; }
 
@@ -6564,7 +6567,9 @@ footer {
     footer form .wpcf7-acceptance label {
       display: flex; }
       footer form .wpcf7-acceptance label span {
-        display: flex; }
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; }
   footer .wpcf7-not-valid-tip {
     background: #ffabab;
     padding: 0px 10px;
@@ -6613,5 +6618,8 @@ footer {
     max-width: 450px;
     display: block;
     margin: 0 auto; }
+
+#solutions svg, #about_us svg {
+  padding: 0 35px; }
 
 /*# sourceMappingURL=app.css.map */
