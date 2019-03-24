@@ -39,7 +39,7 @@ get_header(); ?>
                          );
                   $the_query = new WP_Query( $argss );
                   if( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
-                        $thumb_img = get_the_post_thumbnail_url();
+                        $thumb_img = get_the_post_thumbnail_url(get_the_ID(),'large');
                         $ref_full_img = get_field('full_page_img');
                         $ref_url = get_field('reference_url');
                     ?>
