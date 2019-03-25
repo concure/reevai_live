@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
-                <h1><?php _e('Mám záujem o cennovú ponuku', 'reevai') ?></h1>
+                <h1><?php _e('Mám záujem o cenovú ponuku', 'reevai') ?></h1>
                 <?php the_field('contact_form', 'options'); ?>
             </div>
 
