@@ -68,7 +68,7 @@ get_header(); ?>
                      wp_reset_query();
                     ?>
              </div>
-             <div class="center"><a href="" class="btn_underline"><?php _e('Zobraziť viac', 'reevai') ?></a></div>
+             <div class="center"><a href="" class="btn_underline load-more"><?php _e('Zobraziť viac', 'reevai') ?></a></div>
          </div>
      </div>
  </div>
