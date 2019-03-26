@@ -6062,17 +6062,17 @@ body {
   padding: 14px 10px;
   border-radius: 0;
   white-space: normal;
-  box-shadow: none;
-  transition: all 0.2s ease-in-out;
-  transition: .2s ease-in-out; }
+  transition: all 0.2s ease-in-out !important;
+  transition: 0.2s ease-in-out !important;
+  box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.2); }
   @media (min-width: 992px) {
     .btn, .wpcf7-submit {
       max-width: 450px;
       font-size: 18px;
       padding: 19px 10px; } }
-  .btn:hover, .wpcf7-submit:hover {
+  .btn:hover, .btn:focus, .wpcf7-submit:hover, .wpcf7-submit:focus {
     color: white;
-    box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
     background: red; }
 
 .wpcf7-submit {
@@ -6089,7 +6089,7 @@ body {
   font-weight: bold;
   color: #ff2727;
   border-bottom: 1px solid #ff2727; }
-  .btn_underline:hover {
+  .btn_underline:hover, .btn_underline:focus {
     text-decoration: none;
     color: #ff2727; }
 
@@ -6132,7 +6132,11 @@ header {
   position: fixed;
   background: white;
   padding-top: 15px;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out; }
   @media (min-width: 992px) {
     header {
       position: fixed;
@@ -6146,6 +6150,9 @@ header {
       .logo img {
         width: auto;
         margin-left: 0; } }
+
+.header-shadow {
+  box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.2); }
 
 #open-menu {
   margin-right: 15px;
@@ -6223,6 +6230,7 @@ header {
     .navbar-nav {
       padding-bottom: 0px; } }
   .navbar-nav li a {
+    position: relative;
     font-size: 16px;
     color: #353535;
     padding: 10px 0;
@@ -6232,7 +6240,19 @@ header {
       .navbar-nav li a {
         padding: 0;
         margin: 0 20px; } }
-    .navbar-nav li a:hover {
+    .navbar-nav li a:after {
+      content: '';
+      position: absolute;
+      width: 0px;
+      height: 3px;
+      background: #ff2727;
+      left: 50%;
+      bottom: 0;
+      transition: .2s ease-in-out; }
+    .navbar-nav li a:hover:after, .navbar-nav li a.active:after {
+      width: 60px;
+      margin-left: -30px; }
+    .navbar-nav li a:hover, .navbar-nav li a.active {
       color: #ff2727; }
 
 .jumbotron {
@@ -6257,7 +6277,7 @@ header {
       @media (min-width: 992px) {
         .jumbotron .jumbotron_info h1 {
           font-size: 60px;
-          margin-top: 50px;
+          margin-top: 80px;
           padding-top: 30px; } }
     .jumbotron .jumbotron_info p {
       display: block;

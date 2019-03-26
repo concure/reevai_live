@@ -35,7 +35,7 @@ get_header(); ?>
                  $i = 0;
                   $argss = array(
                           'post_type' => 'referencie',
-                          'posts_per_page' => 6,
+                          'posts_per_page' => -1,
                          );
                   $the_query = new WP_Query( $argss );
                   if( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -44,7 +44,7 @@ get_header(); ?>
                         $ref_url = get_field('reference_url');
                     ?>
                     <div class="gallery-item-wrapper">
-                        <div class="gallery-item" data-aos="fade-left" data-aos-delay="<?php $i++; echo $i; ?>00">
+                        <div class="gallery-item">
                             <a href="javascript:void(0)">
                                 <img src="<?php echo $thumb_img ?>" alt="">
                             </a>

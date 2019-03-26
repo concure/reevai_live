@@ -118,17 +118,17 @@ body {
       padding: 14px 10px;
       border-radius: 0;
       white-space: normal;
-      box-shadow: none;
-      transition: all 0.2s ease-in-out;
-      transition: .2s ease-in-out;
+      transition: all 0.2s ease-in-out!important;
+      transition: .2s ease-in-out!important;
+      box-shadow: 0 10px 30px 0px rgba(0,0,0,0.2);
       @include media-breakpoint-up(lg) {
             max-width: 450px;
             font-size: 18px;
             padding: 19px 10px;
       }
-      &:hover {
+      &:hover, &:focus {
             color: white;
-            box-shadow: 0 10px 30px 0px rgba(0,0,0,0.2);
+            box-shadow: none;
             background: red;
       }
 }
@@ -146,7 +146,7 @@ body {
       font-weight: bold;
       color: $main-red;
       border-bottom: 1px solid $main-red;
-      &:hover {
+      &:hover, &:focus {
             text-decoration: none;
             color: $main-red;
       }
