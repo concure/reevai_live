@@ -34,13 +34,13 @@ jQuery(document).ready(function($) {
     msnry.layout();
   };
 
-  btn.addEventListener("click", (e) => {
 
+  btn.addEventListener("click", (e) => {
     e.preventDefault();
+
     let boxHidden = document.querySelectorAll(".box-hidden");
     let arrayItems = Array.from(boxHidden);
-
-   if (arrayGalleryItems.length >= 3 ) {
+    if (arrayItems.length >= 3 ) {
      btn.textContent = "Zobraziť viac";
      let deleteItems = arrayItems.splice(0, 3);
      deleteItems.forEach((el) =>{
@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
      });
     } else if (arrayItems.length < 3) {
      btn.textContent = "Zobraziť menej";
-     let hideAgain = arrayGalleryItems.splice(-3, 3);
+     let hideAgain = arrayGalleryItems.slice(-6);
      hideAgain.forEach((el) => {
        el.classList.add('box-hidden');
      });
