@@ -10274,7 +10274,11 @@ jQuery(document).ready(function($) {
      deleteItems.forEach((el) =>{
        el.classList.remove('box-hidden');
      });
-    }/* else if (arrayItems.length < 3) {
+    } else {
+        btn.textContent = " ";
+    };
+
+    /* else if (arrayItems.length < 3) {
      btn.textContent = "Zobraziť menej";
      let hideAgain = arrayGalleryItems.slice(-6);
      hideAgain.forEach((el) => {
