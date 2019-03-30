@@ -12,7 +12,8 @@
  * @package reevai
  */
 
-get_header(); ?>
+get_header();
+wp_enqueue_script('masonrycustom');?>
  <div class="jumbotron">
      <div class="container">
          <div class="row">

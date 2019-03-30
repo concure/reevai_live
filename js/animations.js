@@ -162,4 +162,62 @@ jQuery(document).ready(function($) {
     easing: 'easeInOutSine'
   });
 
+  anime({
+    targets: '#right-cloud',
+    translateX: -40,
+    duration: 1400,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+  });
+  anime({
+    targets: '#right-bottom-cloud',
+    translateX: 30,
+    duration: 1700,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+  });
+  anime({
+    targets: '#bottom-cloud',
+    translateX: -70,
+    duration: 2100,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+  });
+  anime({
+    targets: '#bottom-cloud',
+    translateX: -70,
+    duration: 2100,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+  });
+  anime({
+    targets: '#left-bottom-cloud',
+    translateX: 35,
+    duration: 1600,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+  });
+  anime({
+    targets: '#left-cloud',
+    translateX: 35,
+    duration: 1100,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+  });
+  anime({
+    targets: '#left-top-cloud',
+    translateX: 60,
+    duration: 2200,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine'
+  });
+
+
 });

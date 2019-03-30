@@ -16,59 +16,12 @@ jQuery(document).ready(function($) {
     }
   });
 
-  var container = document.querySelector('.reference_gallery');
-  var msnry = new Masonry( container, {
-    columnWidth: '.gallery-item',
-    itemSelector: '.gallery-item',
-  });
-
-  let btn = document.querySelector(".load-more");
-  let galleryItems = document.querySelectorAll(".gallery-item-wrapper");
-  let arrayGalleryItems = Array.from(galleryItems);
-
-  window.onload = function (){
-    let notClass = arrayGalleryItems.slice(3);
-    notClass.forEach((el) =>{
-      el.classList.add('box-hidden');
-    });
-    msnry.layout();
-  };
-
-
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    let boxHidden = document.querySelectorAll(".box-hidden");
-    let arrayItems = Array.from(boxHidden);
-    if (arrayItems.length >= 3 ) {
-     btn.textContent = "Zobraziť viac";
-     let deleteItems = arrayItems.splice(0, 3);
-     deleteItems.forEach((el) =>{
-       el.classList.remove('box-hidden');
-     });
-    } else {
-        btn.textContent = " ";
-    };
-
-    /* else if (arrayItems.length < 3) {
-     btn.textContent = "Zobraziť menej";
-     let hideAgain = arrayGalleryItems.slice(-6);
-     hideAgain.forEach((el) => {
-       el.classList.add('box-hidden');
-     });
-   }*/
-    console.log(arrayGalleryItems);
-    console.log(arrayItems);
-    msnry.layout();
-  });
-
-
   var offs;
   if($(window).width() < 768) {
-    offs = 30;
+    offs = 50;
   }
   else {
-    offs = 150;
+    offs = 130;
   }
   $('.contact-btn').click(function () {
       $('html, body').animate({
@@ -76,6 +29,7 @@ jQuery(document).ready(function($) {
       }, 500);
       return false;
   });
+
   $('.gallery-item').click(function(){
     $(this).parent().find('.gallery-popup').fadeIn();
     $('body').toggleClass('scroll-disable');
@@ -86,16 +40,31 @@ jQuery(document).ready(function($) {
   });
 
 
-  $('a').on('click', function(event) {
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
+
+      // Store hash
       var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top - offs
       }, 800, function(){
-      window.location.hash = hash;
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
       });
-    }
+    } // End if
   });
+  if (window.location.hash) {
+        var hash = window.location.hash;
+        $('html, body').animate({
+            scrollTop :  $(hash).offset().top - offs
+        }, 500);
+    };
 
   AOS.init({
     // Global settings:

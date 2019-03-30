@@ -30,7 +30,7 @@
     <script>
       gtag('event', 'conversion', {'send_to': 'AW-753918145/aOCzCMfq2ZcBEMHBv-cC'});
     </script>
-
+<script src="http://localhost:35729/livereload.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
