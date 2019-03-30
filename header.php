@@ -16,7 +16,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="profile" href="http://gmpg.org/xfn/11">
     <?php wp_head(); ?>
-    <script src="http://localhost:35729/livereload.js"></script>
+    <!-- Global site tag (gtag.js) - Google Ads: 753918145 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-753918145"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-753918145');
+    </script>
+
+        <!-- Event snippet for Reevai zvýšenie návštevnosti conversion page -->
+    <script>
+      gtag('event', 'conversion', {'send_to': 'AW-753918145/aOCzCMfq2ZcBEMHBv-cC'});
+    </script>
+
 </head>
 
 <body <?php body_class(); ?>>
