@@ -5,6 +5,12 @@ jQuery(document).ready(function($) {
     $(this).toggleClass('open');
     return false;
   });
+  if($(window).width() < 991) {
+      $('.navbar-nav .menu-item a').click(function(){
+        $('.collapse').slideToggle();
+        $('#open-menu').removeClass('open');
+      });
+  }
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
@@ -68,7 +74,7 @@ jQuery(document).ready(function($) {
 
   AOS.init({
     // Global settings:
-    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    disable: 'mobile',  // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
     startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
     initClassName: 'aos-init', // class applied after initialization
     animatedClassName: 'aos-animate', // class applied on animation
